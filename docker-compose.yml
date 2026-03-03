@@ -1,0 +1,14 @@
+services:
+  orchestrator:
+    build: .
+    container_name: design_squad_core
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    # Разрешаем доступ к хосту (полезно для локальных LLM)
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
