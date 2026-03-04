@@ -9,7 +9,9 @@ class Message(BaseModel):
 class ChatRequest(BaseModel):
     messages: List[Message]
     model: Optional[str] = "orchestrator"
-    stream: Optional[bool] = False 
+    stream: Optional[bool] = False
+    preset_key: Optional[str] = None   # "button", "input", ... or None (auto)
+    api_key: Optional[str] = None      # альтернатива X-API-Key заголовку
 
 # Выходные данные (Структура ответа Дирижера)
 class ActionItem(BaseModel):

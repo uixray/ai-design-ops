@@ -38,8 +38,8 @@ AGENTS_CONFIG = {
     
     "visual_lead": {
         "name": "Visual Lead (Gemini)",
-        "provider": "google", 
-        "model_key": "gemini-1.5-pro",
+        "provider": "google",
+        "model_key": "gemini-2.0-flash",
         "temperature": 0.2,
         "description": "Анализ изображений и скриншотов.",
         "system_prompt": """Ты — Art Director и эксперт по UI. 

@@ -78,8 +78,8 @@ def google_completion(messages, model, temp):
         except Exception as e:
             error_str = str(e)
             if "404" in error_str or "not found" in error_str:
-                print(f"⚠️ [Gemini] Модель '{model}' не найдена. Пробую Fallback на 'gemini-1.5-flash'...", flush=True)
-                return try_generate("gemini-1.5-flash")
+                print(f"⚠️ [Gemini] Модель '{model}' не найдена. Пробую Fallback на 'gemini-2.0-flash-lite'...", flush=True)
+                return try_generate("gemini-2.0-flash-lite")
             else:
                 raise e
     except Exception as e:
